@@ -21,7 +21,10 @@ Edit this file on GitHub to correct the tracker or add players the search can't 
 | `not_portal` | hides a false positive |
 | `committed` | marks a player committed elsewhere; put the new school in `note` |
 
-New handles go in `data/handles_manual.csv` (school_id, name, x_handle). Every search uses them, and handles are what find players who don't name their school.
+## Adding a player's handle
+Handles are what find players who never name their school. Two ways to add one:
+- **From your phone or browser:** Issues → New issue → **Add player handle**. Pick the school, enter the name and @handle, and optionally paste their portal post link. A workflow adds the handle to `data/handles_manual.csv`, puts the player on the tracker if you gave a link, rebuilds the page, and closes the issue with a comment. Only issues you open trigger it.
+- **Locally:** `py add_handle.py etbu "John Doe" @johndoe [post_url]`, then commit and push.
 
 ## Set up on GitHub (one time)
 1. Create a new repository on GitHub and push this folder to it. It can be **public**: Actions and Pages are free for public repos, and `.env` is never committed. Phone numbers and emails are removed from saved posts.

@@ -1,0 +1,36 @@
+name: Add player handle
+description: Add an ASC football player's X account so the daily scan watches it.
+title: "Add handle: "   # the workflow runs on issues whose title starts with "Add handle"
+body:
+  - type: dropdown
+    id: school
+    attributes:
+      label: School
+      options:
+        - etbu - East Texas Baptist
+        - hsu - Hardin-Simmons
+        - hpu - Howard Payne
+        - mcm - McMurry
+        - su - Schreiner
+        - umhb - Mary Hardin-Baylor
+    validations:
+      required: true
+  - type: input
+    id: name
+    attributes:
+      label: Player name
+      description: As it appears on the roster, e.g. Landon Gigliotta
+    validations:
+      required: true
+  - type: input
+    id: handle
+    attributes:
+      label: X handle
+      description: "@handle or a link to their profile"
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: Portal post link (optional)
+      description: If you saw their portal post, paste its link to put them on the tracker right away.

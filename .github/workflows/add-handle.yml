@@ -1,0 +1,61 @@
+name: Add player handle
+
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: portal-scan     # shares the daily scan's group so the two never commit at once
+  cancel-in-progress: false
+
+jobs:
+  add:
+    # Only issues from the "Add player handle" form, opened by you (the repo owner).
+    if: startsWith(github.event.issue.title, 'Add handle') && github.event.issue.author_association == 'OWNER'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      GH_TOKEN: ${{ github.token }}
+      ISSUE: ${{ github.event.issue.number }}
+      ISSUE_BODY: ${{ github.event.issue.body }}   # passed as data, never pasted into a command
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Add handle
+        id: add
+        run: |
+          printf '%s' "$ISSUE_BODY" > "$RUNNER_TEMP/body.md"
+          set +e
+          python add_handle.py --issue-body-file "$RUNNER_TEMP/body.md" > "$RUNNER_TEMP/result.txt"
+          echo "ok=$([ $? -eq 0 ] && echo true || echo false)" >> "$GITHUB_OUTPUT"
+          cat "$RUNNER_TEMP/result.txt"
+
+      - name: Rebuild tracker and commit
+        if: steps.add.outputs.ok == 'true'
+        run: |
+          python build_tracker.py
+          git config user.name "portal-scan-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data docs
+          if ! git diff --cached --quiet; then
+            git commit -m "Add handle from issue #$ISSUE"
+            git pull --rebase
+            git push
+          fi
+
+      - name: Reply on the issue
+        if: always()
+        run: |
+          if [ "${{ steps.add.outputs.ok }}" = "true" ]; then
+            gh issue close "$ISSUE" --comment "$(cat "$RUNNER_TEMP/result.txt")"
+          else
+            gh issue comment "$ISSUE" --body "$(cat "$RUNNER_TEMP/result.txt" 2>/dev/null || echo 'Something went wrong; see the Actions log.') Edit nothing here; open a new issue with the fix."
+          fi
