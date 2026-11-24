@@ -23,7 +23,7 @@ hsu,Hardin-Simmons,Zavyn Jenkins,21,CB,So.,"Mansfield, Texas",Mansfield,,,,https
 hsu,Hardin-Simmons,Keyon House,22,CB,Jr.,"Fort Worth, Texas",Arlington,,,,https://hsuathletics.com/sports/football/roster/keyon-house/9264
 hsu,Hardin-Simmons,Jayden Moore,23,S,So.,"Crowley, Texas",Heritage,,,,https://hsuathletics.com/sports/football/roster/jayden-moore/9173
 hsu,Hardin-Simmons,Brody Bobo,24,S,So.,"Amarillo, Texas",West Plains,,,,https://hsuathletics.com/sports/football/roster/brody-bobo/9109
-hsu,Hardin-Simmons,Shawn Kazouh,25,S,So.,"Mansfield, Texas",Godley,,,,https://hsuathletics.com/sports/football/roster/shawn-kazouh/9152
+hsu,Hardin-Simmons,Shawn Kazouh,25,S,So.,"Mansfield, Texas",Godley,D1shawn3,,manual,https://hsuathletics.com/sports/football/roster/shawn-kazouh/9152
 hsu,Hardin-Simmons,Jerrion Hall,26,RB,Fr.,"Malakoff, Texas",Malakoff,,,,https://hsuathletics.com/sports/football/roster/jerrion-hall/9294
 hsu,Hardin-Simmons,Joe Soto,27,S,Jr.,"Victoria, Texas",East,,,,https://hsuathletics.com/sports/football/roster/joe-soto/9203
 hsu,Hardin-Simmons,Terrence Scott,28,RB,Fr.,"Bremond, Texas",Bremond,,,,https://hsuathletics.com/sports/football/roster/terrence-scott/9321
@@ -80,7 +80,7 @@ hsu,Hardin-Simmons,Mike McAfee,77,T,Sr.,"Hallettsville, Texas",Hallettsville,,,,
 hsu,Hardin-Simmons,Barrett Mancini,78,OL,Jr.,"Abilene, Texas",Borger,,,,https://hsuathletics.com/sports/football/roster/barrett-mancini/9160
 hsu,Hardin-Simmons,Nate Rodriguez,79,G,Jr.,"Odessa, Texas",Permian,,,,https://hsuathletics.com/sports/football/roster/nate-rodriguez/9192
 hsu,Hardin-Simmons,Deandre Ralston,80,WR,Sr.,"Abilene, Texas",Cooper,,,,https://hsuathletics.com/sports/football/roster/deandre-ralston/9185
-hsu,Hardin-Simmons,Austin Hailey,81,WR,Jr.,"Prosper, Texas",Prosper (West Texas A&M),,,,https://hsuathletics.com/sports/football/roster/austin-hailey/9251
+hsu,Hardin-Simmons,Austin Hailey,81,WR,Jr.,"Prosper, Texas",Prosper (West Texas A&M),AustinHailey25,,manual,https://hsuathletics.com/sports/football/roster/austin-hailey/9251
 hsu,Hardin-Simmons,Justin Herman,82,WR,Jr.,"Montgomery, Texas",Montgomery (UTPB/UTRGV),,,,https://hsuathletics.com/sports/football/roster/justin-herman/9267
 hsu,Hardin-Simmons,Kaden Turner,84,P/K,Jr.,"San Antonio, Texas",Clemens (Texas Tech),,,,https://hsuathletics.com/sports/football/roster/kaden-turner/9212
 hsu,Hardin-Simmons,Jackson Butchee,85,TE,So.,"Stephenville, Texas",Stephenville,,,,https://hsuathletics.com/sports/football/roster/jackson-butchee/9115
@@ -126,10 +126,10 @@ hsu,Hardin-Simmons,Bryce Duron,,QB,Fr.,"Angleton, Texas",Angleton,,,,https://hsu
 hsu,Hardin-Simmons,Dom Garcia,,QB,Jr.,"San Angelo, Texas",Lago Vista,,,,https://hsuathletics.com/sports/football/roster/dom-garcia/9140
 hsu,Hardin-Simmons,Talon Garcia,,WR,Fr.,"Dalhart, Texas",Dalhart,,,,https://hsuathletics.com/sports/football/roster/talon-garcia/9361
 hsu,Hardin-Simmons,Zane Garcia,,RG,Fr.,"Sanger, Texas",Sanger,,,,https://hsuathletics.com/sports/football/roster/zane-garcia/9352
-hsu,Hardin-Simmons,Jaylen Garner,,DB,Fr.,"San Antonio, Texas",Brennan,,,,https://hsuathletics.com/sports/football/roster/jaylen-garner/9362
-hsu,Hardin-Simmons,Landon Gigliotta,,QB,Fr.,"Weatherford, Texas",Fort Worth Christian,,,,https://hsuathletics.com/sports/football/roster/landon-gigliotta/9288
+hsu,Hardin-Simmons,Jaylen Garner,,DB,Fr.,"San Antonio, Texas",Brennan,Jaylen5Garner,,manual,https://hsuathletics.com/sports/football/roster/jaylen-garner/9362
+hsu,Hardin-Simmons,Landon Gigliotta,,QB,Fr.,"Weatherford, Texas",Fort Worth Christian,landonqb8,,manual,https://hsuathletics.com/sports/football/roster/landon-gigliotta/9288
 hsu,Hardin-Simmons,Easton Gill,,TE,Fr.,"Mesquite, Texas",Poteet,,,,https://hsuathletics.com/sports/football/roster/easton-gill/9289
-hsu,Hardin-Simmons,Tru Gipson,,RB,Fr.,"Vernon, Texas",Vernon,,,,https://hsuathletics.com/sports/football/roster/tru-gipson/9290
+hsu,Hardin-Simmons,Tru Gipson,,RB,Fr.,"Vernon, Texas",Vernon,TruGipson,,manual,https://hsuathletics.com/sports/football/roster/tru-gipson/9290
 hsu,Hardin-Simmons,Cayden Glass,,QB,Fr.,"San Antonio, Texas",Brennan,,,,https://hsuathletics.com/sports/football/roster/cayden-glass/9363
 hsu,Hardin-Simmons,Jackson Glover,,DE,Sr.,"Katy, Texas",Saint John XXIII (TLU),,,,https://hsuathletics.com/sports/football/roster/jackson-glover/9141
 hsu,Hardin-Simmons,Christian Gordon,,OL,Fr.,"Forney, Texas",Terrell,,,,https://hsuathletics.com/sports/football/roster/christian-gordon/9364
@@ -162,7 +162,7 @@ hsu,Hardin-Simmons,Jeffrey Majka,,TE,Fr.,"La Vernia, Texas",La Vernia,,,,https:/
 hsu,Hardin-Simmons,Jaxxon Marie,,QB,Fr.,"Cuero, Texas",Cuero,,,,https://hsuathletics.com/sports/football/roster/jaxxon-marie/9309
 hsu,Hardin-Simmons,Joshua Marrero,,DB,Fr.,"Lubbock, Texas",Trinity Christian,,,,https://hsuathletics.com/sports/football/roster/joshua-marrero/9310
 hsu,Hardin-Simmons,Seth Mayberry,,QB,Fr.,"Plainview, Texas",Plainview,,,,https://hsuathletics.com/sports/football/roster/seth-mayberry/9312
-hsu,Hardin-Simmons,Cade McCollough,,WR/K,Fr.,"Peaster, Texas",Peaster,,,,https://hsuathletics.com/sports/football/roster/cade-mccollough/9333
+hsu,Hardin-Simmons,Cade McCollough,,WR/K,Fr.,"Peaster, Texas",Peaster,CadeMcCollough1,,manual,https://hsuathletics.com/sports/football/roster/cade-mccollough/9333
 hsu,Hardin-Simmons,J'Von McDonald,,DB,Jr.,"San Antonio, Texas",Madison,,,,https://hsuathletics.com/sports/football/roster/j-von-mcdonald/9166
 hsu,Hardin-Simmons,Coleman Merritt,,K,So.,"Frankston, Texas",Frankston,,,,https://hsuathletics.com/sports/football/roster/coleman-merritt/9170
 hsu,Hardin-Simmons,Reed Michna,,LB,Sr.,Lorena. Texas,Lorena (Texas Wesleyan),,,,https://hsuathletics.com/sports/football/roster/reed-michna/9172
@@ -316,8 +316,8 @@ umhb,Mary Hardin-Baylor,Kale Carr,,WR,Fr.,"Kountze, TX",Lumberton,,,,https://cru
 umhb,Mary Hardin-Baylor,Reid Castellanos,,K,So.,"San Antonio, TX",Marshall,,,,https://cruathletics.com/sports/football/roster/reid-castellanos/13213
 umhb,Mary Hardin-Baylor,Caleb Chandler,,DT,Fr.,"Belton, TX",Lake Belton,,,,https://cruathletics.com/sports/football/roster/caleb-chandler/13296
 umhb,Mary Hardin-Baylor,John Charron,,OL,So.,"Liberty Hill, TX",Burnet,,,,https://cruathletics.com/sports/football/roster/john-charron/13214
-umhb,Mary Hardin-Baylor,Brodie Clark,,WR,Fr.,"Azle, TX",Azle,,,,https://cruathletics.com/sports/football/roster/brodie-clark/13297
-umhb,Mary Hardin-Baylor,Kaden Cockburn,,LB,Fr.,"Liberty Hill, TX",Liberty Hill,,,,https://cruathletics.com/sports/football/roster/kaden-cockburn/13298
+umhb,Mary Hardin-Baylor,Brodie Clark,,WR,Fr.,"Azle, TX",Azle,BrodieClark_,,manual,https://cruathletics.com/sports/football/roster/brodie-clark/13297
+umhb,Mary Hardin-Baylor,Kaden Cockburn,,LB,Fr.,"Liberty Hill, TX",Liberty Hill,KadenCockburn,,manual,https://cruathletics.com/sports/football/roster/kaden-cockburn/13298
 umhb,Mary Hardin-Baylor,Orrin Cole,,LB,Fr.,"Liberty Hill, TX",Liberty Hill,,,,https://cruathletics.com/sports/football/roster/orrin-cole/13299
 umhb,Mary Hardin-Baylor,Matthew Cortez,,LB,So.,"Plano, TX",TCA Addison,,,,https://cruathletics.com/sports/football/roster/matthew-cortez/13216
 umhb,Mary Hardin-Baylor,Konner Crawford,,TE,So.,"Pasadena, TX",First Baptist,,,,https://cruathletics.com/sports/football/roster/konner-crawford/13218
@@ -396,7 +396,7 @@ umhb,Mary Hardin-Baylor,Justin Tardy,,RB,Fr.,"San Antonio, TX",San Marcos,,,,htt
 umhb,Mary Hardin-Baylor,Jiovani Thomas,,DT,Fr.,"Alvarado, TX",Burleson,,,,https://cruathletics.com/sports/football/roster/jiovani-thomas/13378
 umhb,Mary Hardin-Baylor,Willie Thomas,,RB,Fr.,"Killeen, TX",Shoemaker,,,,https://cruathletics.com/sports/football/roster/willie-thomas/13379
 umhb,Mary Hardin-Baylor,Cooper Timmons,,OL,Fr.,"Dallas, TX",Bishop Lynch,,,,https://cruathletics.com/sports/football/roster/cooper-timmons/13380
-umhb,Mary Hardin-Baylor,Dermonico Townsend II,,CB,Fr.,"Oak Cliff, TX",Carter,,,,https://cruathletics.com/sports/football/roster/dermonico-townsend-ii/13382
+umhb,Mary Hardin-Baylor,Dermonico Townsend II,,CB,Fr.,"Oak Cliff, TX",Carter,dermonico_ii,,manual,https://cruathletics.com/sports/football/roster/dermonico-townsend-ii/13382
 umhb,Mary Hardin-Baylor,Noah Turner,,K,So.,"Mineola, TX",Mineola,,,,https://cruathletics.com/sports/football/roster/noah-turner/13428
 umhb,Mary Hardin-Baylor,Omari Tyner,,LB,Fr.,"Ferris, TX",Ferris,,,,https://cruathletics.com/sports/football/roster/omari-tyner/13383
 umhb,Mary Hardin-Baylor,Joel Valdez,,LB,So.,"Cherokee, TX",Cherokee,,,,https://cruathletics.com/sports/football/roster/joel-valdez/13267
@@ -586,11 +586,11 @@ hpu,Howard Payne,Ja'carious Wiley,,Wide Receiver,Fr.,"Wharton, Texas",Wharton HS
 hpu,Howard Payne,Iantavion Williams,,Defensive Back,So.,"Grand Prairie, Texas",South Grand Prairie HS,,,,https://hpusports.com/sports/football/roster/iantavion-williams/7127
 hpu,Howard Payne,Jakwan Williams,,Defensive Back,Fr.,"Houston, Texas",Chavez HS,,,,https://hpusports.com/sports/football/roster/jakwan-williams/7156
 hpu,Howard Payne,Darius Williams-Jones,,Defensive Back,So.,"Missouri City, Texas",Elkins HS,,,,https://hpusports.com/sports/football/roster/darius-williams-jones/7128
-etbu,East Texas Baptist,Kylevon Morrow,0,LB,Jr.,"Kaufman, TX",Kaufman,,,,https://goetbutigers.com/sports/football/roster/kylevon-morrow/11740
-etbu,East Texas Baptist,EJ Stovall,1,WR,Sr.,"Houston, MS",Houston,,,,https://goetbutigers.com/sports/football/roster/ej-stovall/11762
+etbu,East Texas Baptist,Kylevon Morrow,0,LB,Jr.,"Kaufman, TX",Kaufman,KylevonM,,manual,https://goetbutigers.com/sports/football/roster/kylevon-morrow/11740
+etbu,East Texas Baptist,EJ Stovall,1,WR,Sr.,"Houston, MS",Houston,ej_stovall,,manual,https://goetbutigers.com/sports/football/roster/ej-stovall/11762
 etbu,East Texas Baptist,Adrian Porter,2,LB,So.,"Manvel, TX",Iowa Colony,Porterjr2Jr,Thareal_.ap,manual,https://goetbutigers.com/sports/football/roster/adrian-porter/11746
 etbu,East Texas Baptist,Mason Stancliff,3,FS,Jr.,"Burleson, TX",Centennial,,,,https://goetbutigers.com/sports/football/roster/mason-stancliff/11760
-etbu,East Texas Baptist,Cole Confessore,4,CB,Jr.,"Burleson, TX",Centennial,,c.confessore4,roster,https://goetbutigers.com/sports/football/roster/cole-confessore/11702
+etbu,East Texas Baptist,Cole Confessore,4,CB,Jr.,"Burleson, TX",Centennial,Coleconfessore,c.confessore4,manual,https://goetbutigers.com/sports/football/roster/cole-confessore/11702
 etbu,East Texas Baptist,Paul Woodard,5,RB,Sr.,"Freeport, TX",Brazosport,,,,https://goetbutigers.com/sports/football/roster/paul-woodard/11783
 etbu,East Texas Baptist,Brandon Kennedy,6,WR,Fr.,"Waskom,TX",Elysian Fields,,,,https://goetbutigers.com/sports/football/roster/brandon-kennedy/12167
 etbu,East Texas Baptist,Torryan Hinton,7,CB,Jr.,"Port Arthur, TX",Port Neches-Groves,torryan_hinton,torryan.hinton,roster,https://goetbutigers.com/sports/football/roster/torryan-hinton/11718
@@ -599,17 +599,17 @@ etbu,East Texas Baptist,Jack Crawford,9,QB,Sr.,"Hattiesburg, MS",Oak Grove,,,,ht
 etbu,East Texas Baptist,Colton Wilson,11,DE,Jr.,"Ennis, TX",Ennis,,,,https://goetbutigers.com/sports/football/roster/colton-wilson/11780
 etbu,East Texas Baptist,Shai Markajani,12,QB,So.,"San Antonio, TX",Roosevelt,,,,https://goetbutigers.com/sports/football/roster/shai-markajani/11731
 etbu,East Texas Baptist,Carson French,13,WR,So.,"Canton, TX",Canton,Carso_French1,carfrench12,roster,https://goetbutigers.com/sports/football/roster/carson-french/11711
-etbu,East Texas Baptist,Kemaur Johnson,14,FS,So.,"Dallas, TX",North Mesquite,,,,https://goetbutigers.com/sports/football/roster/kemaur-johnson/11726
+etbu,East Texas Baptist,Kemaur Johnson,14,FS,So.,"Dallas, TX",North Mesquite,Bihh_Kj,,manual,https://goetbutigers.com/sports/football/roster/kemaur-johnson/11726
 etbu,East Texas Baptist,Jaylen Spriggs,15,QB,Sr.,"Fort Worth, TX",All Saints Episcopal,,,,https://goetbutigers.com/sports/football/roster/jaylen-spriggs/11759
 etbu,East Texas Baptist,Warren Bowman,16,WR,Fr.,Coushatta. LA,Red River,,,,https://goetbutigers.com/sports/football/roster/warren-bowman/12053
 etbu,East Texas Baptist,Jalen Wilridge,17,FS,Fr.,"Houston,TX",Humble,,,,https://goetbutigers.com/sports/football/roster/jalen-wilridge/12109
 etbu,East Texas Baptist,Rayvon Sauls,18,LB,Fr.,"Humble, TX",Atascocita,Raythegoat6,,manual,https://goetbutigers.com/sports/football/roster/rayvon-sauls/12066
-etbu,East Texas Baptist,Dakarion Judge,19,WR,Sr.,"Orange,TX",West Orange Stark,,,,https://goetbutigers.com/sports/football/roster/dakarion-judge/12164
-etbu,East Texas Baptist,JaMichael Cooper,20,RB,Jr.,"Tyler, TX",Tyler,,,,https://goetbutigers.com/sports/football/roster/jamichael-cooper/12086
+etbu,East Texas Baptist,Dakarion Judge,19,WR,Sr.,"Orange,TX",West Orange Stark,dakarion10judge,,manual,https://goetbutigers.com/sports/football/roster/dakarion-judge/12164
+etbu,East Texas Baptist,JaMichael Cooper,20,RB,Jr.,"Tyler, TX",Tyler,4Jmikeee,,manual,https://goetbutigers.com/sports/football/roster/jamichael-cooper/12086
 etbu,East Texas Baptist,Montrevian Cushionberry,21,CB,So.,"Fort Worth, TX",Burleson,MontrevianC,Forevertretre,roster,https://goetbutigers.com/sports/football/roster/montrevian-cushionberry/11703
 etbu,East Texas Baptist,Joe Stroman,22,FS,So.,"Atlanta, TX",Atlanta,,,,https://goetbutigers.com/sports/football/roster/joe-stroman/11763
 etbu,East Texas Baptist,Dayshun Reese,23,RB,So.,"Dallas, TX",Cedar Hill,,,,https://goetbutigers.com/sports/football/roster/dayshun-reese/11748
-etbu,East Texas Baptist,Bryson Linnear,24,RB,So.,"Waxahachie, TX",Waxahachie,,,,https://goetbutigers.com/sports/football/roster/bryson-linnear/11728
+etbu,East Texas Baptist,Bryson Linnear,24,RB,So.,"Waxahachie, TX",Waxahachie,BrysonLinnear,,manual,https://goetbutigers.com/sports/football/roster/bryson-linnear/11728
 etbu,East Texas Baptist,Jakylon Thomas,25,CB,Fr.,"Breaux Bridge, LA",Breaux Bridge,,,,https://goetbutigers.com/sports/football/roster/jakylon-thomas/12094
 etbu,East Texas Baptist,Jayden Barnes,26,CB,Fr.,"Conroe, TX",Oak Ridge,,,,https://goetbutigers.com/sports/football/roster/jayden-barnes/12051
 etbu,East Texas Baptist,Kyreon Prier,27,CB,So.,"Marksville, LA",Marksville,,,,https://goetbutigers.com/sports/football/roster/kyreon-prier/11747
@@ -620,14 +620,14 @@ etbu,East Texas Baptist,Christian Erb,31,LB,Fr.,"Huffman,TX",Hargrave,,,,https:/
 etbu,East Texas Baptist,Toby White,32,LB,Fr.,"Huffman, TX",Hargrave,,,,https://goetbutigers.com/sports/football/roster/toby-white/12106
 etbu,East Texas Baptist,Tyresse Barnes,33,RB,So.,"La Porte, TX",La Porte,BarnesTyresse,tyressebarness,roster,https://goetbutigers.com/sports/football/roster/tyresse-barnes/11692
 etbu,East Texas Baptist,Brandon Thomas,35,LB,Sr.,"Midlothian, TX",Midlothian Heritage,,,,https://goetbutigers.com/sports/football/roster/brandon-thomas/11766
-etbu,East Texas Baptist,Javonte Motley,36,FS,Fr.,"Glenn Heights, TX",Red Oak,,,,https://goetbutigers.com/sports/football/roster/javonte-motley/12040
+etbu,East Texas Baptist,Javonte Motley,36,FS,Fr.,"Glenn Heights, TX",Red Oak,Motley__6,,manual,https://goetbutigers.com/sports/football/roster/javonte-motley/12040
 etbu,East Texas Baptist,Kylan Smart,37,FS,Fr.,"Carrollton, TX",Hebron,,,,https://goetbutigers.com/sports/football/roster/kylan-smart/12069
 etbu,East Texas Baptist,Seyram Tamakloe,38,LB,So.,"Dallas, TX",Richardson,,,,https://goetbutigers.com/sports/football/roster/seyram-tamakloe/11765
 etbu,East Texas Baptist,LaDavian Red,39,LB,Fr.,"Houston, TX",Elkins,,,,https://goetbutigers.com/sports/football/roster/ladavian-red/12059
-etbu,East Texas Baptist,Jonah Greely,40,TE,Fr.,"Monroe,LA",Wossman,,,,https://goetbutigers.com/sports/football/roster/jonah-greely/12107
+etbu,East Texas Baptist,Jonah Greely,40,TE,Fr.,"Monroe,LA",Wossman,Greely1Jonah,,manual,https://goetbutigers.com/sports/football/roster/jonah-greely/12107
 etbu,East Texas Baptist,David Red,42,TE,Fr.,"Houston,TX",Elkins,,,,https://goetbutigers.com/sports/football/roster/david-red/12058
 etbu,East Texas Baptist,Konnor Hanks,43,LB,So.,"Richmond, TX",Foster,,,,https://goetbutigers.com/sports/football/roster/konnor-hanks/11714
-etbu,East Texas Baptist,Cassidi Smith,44,LB,Sr.,"Jennings, LA",Lafayette Christian Academy,,,,https://goetbutigers.com/sports/football/roster/cassidi-smith/11755
+etbu,East Texas Baptist,Cassidi Smith,44,LB,Sr.,"Jennings, LA",Lafayette Christian Academy,CassidiSmithLA,,manual,https://goetbutigers.com/sports/football/roster/cassidi-smith/11755
 etbu,East Texas Baptist,Aidan Hernandez,45,P,Sr.,"Linden, TX",Linden-Kildare,,,,https://goetbutigers.com/sports/football/roster/aidan-hernandez/11717
 etbu,East Texas Baptist,Pedro Cavazos,46,K,Sr.,"Needville, TX",Needville,,,,https://goetbutigers.com/sports/football/roster/pedro-cavazos/11701
 etbu,East Texas Baptist,Mitchell White,47,K,So.,"Corinth, TX",Lake Dallas,,,,https://goetbutigers.com/sports/football/roster/mitchell-white/11778
@@ -641,9 +641,9 @@ etbu,East Texas Baptist,Brayden Huber,57,DS,Jr.,"Frisco, TX",Legacy Christian Ac
 etbu,East Texas Baptist,Ty Shannon,60,OL,So.,"Paris, TX",Prairiland,,,,https://goetbutigers.com/sports/football/roster/ty-shannon/11752
 etbu,East Texas Baptist,Chase Shaw-Mathis,62,OL,Fr.,"Fort Worth, TX",Martin,,,,https://goetbutigers.com/sports/football/roster/chase-shaw-mathis/12068
 etbu,East Texas Baptist,Joseph London,63,DL,So.,"Baton Rogue, LA",Woodlawn,,,,https://goetbutigers.com/sports/football/roster/joseph-london/12612
-etbu,East Texas Baptist,Kylin Manning,64,OL,Fr.,"La Porte, TX",La Porte,,,,https://goetbutigers.com/sports/football/roster/kylin-manning/12032
+etbu,East Texas Baptist,Kylin Manning,64,OL,Fr.,"La Porte, TX",La Porte,K_Manning4464,,manual,https://goetbutigers.com/sports/football/roster/kylin-manning/12032
 etbu,East Texas Baptist,Cade Forrest,65,OL,Fr.,"Huntington,TX",Huntington,,,,https://goetbutigers.com/sports/football/roster/cade-forrest/12101
-etbu,East Texas Baptist,Bryce Anderson,66,OL,So.,"Pearland, TX",Pearland,,,,https://goetbutigers.com/sports/football/roster/bryce-anderson/11690
+etbu,East Texas Baptist,Bryce Anderson,66,OL,So.,"Pearland, TX",Pearland,BryceAndersonOL,,manual,https://goetbutigers.com/sports/football/roster/bryce-anderson/11690
 etbu,East Texas Baptist,Nicholas Gardiner,67,DL,Jr.,"Port Arthur, TX",Port Neches-Groves,,,,https://goetbutigers.com/sports/football/roster/nicholas-gardiner/12103
 etbu,East Texas Baptist,Josiah Johnson,68,OL,So.,"Houston, TX",Manvel,,,,https://goetbutigers.com/sports/football/roster/josiah-johnson/11725
 etbu,East Texas Baptist,Keith Newton,69,DL,Fr.,"Texarkana, TX",Liberty-Eylau,,,,https://goetbutigers.com/sports/football/roster/keith-newton/12042
@@ -666,14 +666,14 @@ etbu,East Texas Baptist,Vontez Martin,88,WR,Sr.,"Killeen, TX",Shoemaker,,,,https
 etbu,East Texas Baptist,Beres Owens,90,DL,So.,"Round Rock, TX",Round Rock,,,,https://goetbutigers.com/sports/football/roster/beres-owens/11743
 etbu,East Texas Baptist,Robert Bankston III,91,DL,Fr.,"East Bernard, TX",East Bernard,,,,https://goetbutigers.com/sports/football/roster/robert-bankston-iii/12046
 etbu,East Texas Baptist,Dillon Miller,93,DL,Jr.,"Midlothian, TX",Midlothian Heritage,,,,https://goetbutigers.com/sports/football/roster/dillon-miller/11736
-etbu,East Texas Baptist,Chance Bloodsaw,95,DL,So.,"Houston, TX",Lamar,,,,https://goetbutigers.com/sports/football/roster/chance-bloodsaw/11694
+etbu,East Texas Baptist,Chance Bloodsaw,95,DL,So.,"Houston, TX",Lamar,Cbloodsaw1,,manual,https://goetbutigers.com/sports/football/roster/chance-bloodsaw/11694
 etbu,East Texas Baptist,"Jamaal Jackson, Jr.",96,DL,So.,"Duncanville, TX",Cedar Hill,,,,https://goetbutigers.com/sports/football/roster/jamaal-jackson-jr-/11721
 etbu,East Texas Baptist,Marcus Palmer,98,DL,So.,"Shreveport, LA",Woodlawn,,,,https://goetbutigers.com/sports/football/roster/marcus-palmer/12047
 etbu,East Texas Baptist,Josiah Dawsey,99,DL,Sr.,"Webster, TX",Clear Creek,,,,https://goetbutigers.com/sports/football/roster/josiah-dawsey/11704
 etbu,East Texas Baptist,Angel Abimael,,FS,Fr.,"Lake Jackson,TX",Brazoswood,,,,https://goetbutigers.com/sports/football/roster/angel-abimael/12041
 etbu,East Texas Baptist,Derrian Anderson,,WR,Fr.,"Beaumont,TX",Beaumont United,,,,https://goetbutigers.com/sports/football/roster/derrian-anderson/12025
 etbu,East Texas Baptist,Ashton Arriaga,,RB,Fr.,"Tyler, TX",Tyler,,,,https://goetbutigers.com/sports/football/roster/ashton-arriaga/12045
-etbu,East Texas Baptist,Kai Bonner,,FS,So.,"Humble, TX",Summer Creek,,,,https://goetbutigers.com/sports/football/roster/kai-bonner/11695
+etbu,East Texas Baptist,Kai Bonner,,FS,So.,"Humble, TX",Summer Creek,KaiBon_06,,manual,https://goetbutigers.com/sports/football/roster/kai-bonner/11695
 etbu,East Texas Baptist,Lorenzo Bridges,,TE,Fr.,"Katy, TX",Morton Ranch,,,,https://goetbutigers.com/sports/football/roster/lorenzo-bridges/12054
 etbu,East Texas Baptist,Tristan Brooks,,WR,Fr.,"Maypearl,TX",Maypearl,,,,https://goetbutigers.com/sports/football/roster/tristan-brooks/12057
 etbu,East Texas Baptist,Anthony Brown,,WR,Fr.,"Hillsboro,TX",Hillsboro,,,,https://goetbutigers.com/sports/football/roster/anthony-brown/12070
@@ -701,10 +701,10 @@ etbu,East Texas Baptist,Layton Morgan,,LB,So.,"Wills Point, TX",Boles,,,,https:/
 etbu,East Texas Baptist,Braylen Patterson,,WR,Fr.,"Newton, TX",Newton,,,,https://goetbutigers.com/sports/football/roster/braylen-patterson/12049
 etbu,East Texas Baptist,Dajon Patterson,,WR,Fr.,"Houston, TX",Alief Elsik,,,,https://goetbutigers.com/sports/football/roster/dajon-patterson/12050
 etbu,East Texas Baptist,Anthony Poe,,WR,Fr.,"Richmond, TX",George Bush,,,,https://goetbutigers.com/sports/football/roster/anthony-poe/12056
-etbu,East Texas Baptist,Jonah Riordan,,WR,So.,"Tyler, TX",Chapel Hill,,,,https://goetbutigers.com/sports/football/roster/jonah-riordan/11749
+etbu,East Texas Baptist,Jonah Riordan,,WR,So.,"Tyler, TX",Chapel Hill,jonah_riordan,,manual,https://goetbutigers.com/sports/football/roster/jonah-riordan/11749
 etbu,East Texas Baptist,Kale Russell,,QB,Fr.,"Blessing,TX",Tidehaven,,,,https://goetbutigers.com/sports/football/roster/kale-russell/12063
 etbu,East Texas Baptist,Jesstin Starling,,RB,Fr.,"Henderson, TX",Henderson,,,,https://goetbutigers.com/sports/football/roster/jesstin-starling/12076
-etbu,East Texas Baptist,Marc Stephens,,LB,So.,"Killeen, TX",Robert M Shoemaker,,,,https://goetbutigers.com/sports/football/roster/marc-stephens/11761
+etbu,East Texas Baptist,Marc Stephens,,LB,So.,"Killeen, TX",Robert M Shoemaker,ItsMarcJr,,manual,https://goetbutigers.com/sports/football/roster/marc-stephens/11761
 etbu,East Texas Baptist,Allen Thomas,,WR,Fr.,"Houston, TX",Second Baptist,,,,https://goetbutigers.com/sports/football/roster/allen-thomas/12085
 etbu,East Texas Baptist,Josiah Turner,,CB,Fr.,"Little Elm, TX",Frisco Panther Creek,,,,https://goetbutigers.com/sports/football/roster/josiah-turner/12097
 etbu,East Texas Baptist,Nicholas Vidrine,,QB,Fr.,"Monroe, LA",Ouachita Christian,,,,https://goetbutigers.com/sports/football/roster/nicholas-vidrine/12099
@@ -759,7 +759,7 @@ mcm,McMurry,Quay Veasley,29,DB,So.,"Pittsburg, TX",Pittsburg HS,,,,https://mcmur
 mcm,McMurry,Jake Broom,30,TE,So.,"North Richland Hills, TX",Birdville HS,,,,https://mcmurrysports.com/sports/football/roster/jake-broom/10828
 mcm,McMurry,Jamal Logan,31,DB,Fr.,"Crandall, TX",Crandall HS,,,,https://mcmurrysports.com/sports/football/roster/jamal-logan/10936
 mcm,McMurry,Kaleb Martinez,32,RB,So.,"El Paso, TX",Parkland HS,,,,https://mcmurrysports.com/sports/football/roster/kaleb-martinez/10862
-mcm,McMurry,Dolyal Bickham,33,LB,R-Jr.,"Lafayette, LA",Lafayette Christian Academy,,,,https://mcmurrysports.com/sports/football/roster/dolyal-bickham/10825
+mcm,McMurry,Dolyal Bickham,33,LB,R-Jr.,"Lafayette, LA",Lafayette Christian Academy,dolyal_bickham,,manual,https://mcmurrysports.com/sports/football/roster/dolyal-bickham/10825
 mcm,McMurry,David Fraga,34,RB,Fr.,"Kenedy, TX",Kenedy HS,,,,https://mcmurrysports.com/sports/football/roster/david-fraga/10923
 mcm,McMurry,Alex Idaho,35,RB,Fr.,"Euless, TX",Trinity HS,,,,https://mcmurrysports.com/sports/football/roster/alex-idaho/11147
 mcm,McMurry,JaiShawn Lee,36,DB,So.,"Tyler, TX",Tyler Legacy HS,,,,https://mcmurrysports.com/sports/football/roster/jaishawn-lee/10859
@@ -825,137 +825,3 @@ mcm,McMurry,Maurice McNary,,DB,Fr.,"Monahans, TX",Monahans HS,,,,https://mcmurry
 mcm,McMurry,Zion McPhee,,RB,Fr.,"Venus, TX",Venus HS,,,,https://mcmurrysports.com/sports/football/roster/zion-mcphee/10941
 mcm,McMurry,Hayden Parker,,LB,Fr.,"Anson, TX",Anson HS,,,,https://mcmurrysports.com/sports/football/roster/hayden-parker/11148
 mcm,McMurry,Mateo Roberson,,RB,Fr.,"Wolfforth, TX",Frenship HS,,,,https://mcmurrysports.com/sports/football/roster/mateo-roberson/10948
-su,Schreiner,Isaac Ponce,1,QB,Jr.,"Brazoswood, TX",Brazoswood HS,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/ponce_isaac_wgmn
-su,Schreiner,Braylen South,1,CB,Fr.,"Lake Charles, LA",Eisenhower HS,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/south_braylen_rtan
-su,Schreiner,Gibby Alvarado,2,QB,Fr.,"San Antonio, TX",Holy Cross HS/Texas Lutheran University,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/alverado_gibby_39dl
-su,Schreiner,Ethan Collida,3,WR,Jr.,"San Antonio, TX",Brandeis HS/ Hardin Simmons,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/collida_ethan_f2k2
-su,Schreiner,Tristan Wilson,3,ILB,Fr.,"Corpus Christi, TX",Flour Bluff HS,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/wilson_tristan_426q
-su,Schreiner,President Calamaco,4,WR,Fr.,"Kerrville, TX",Tivy HS,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/calamaco_president_0jqp
-su,Schreiner,Travis Johnson,4,OLB,Fr.,"Missouri City, TX",Episcopal HS,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/johnson_travis_6ms8
-su,Schreiner,Vamaur Johnson,5,DE,So.,"Katy, TX",Paetow HS,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/johnson_vamaur_avpc
-su,Schreiner,Joseph Leal,5,WR,Fr.,"Weslaco,TX",Weslaco HS,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/leal_joseph_8e89
-su,Schreiner,Mar'kel Ford,6,WR,So.,"San Antonio, TX",Wagner HS,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/ford_mar-kel_qhpg
-su,Schreiner,Derrick Gray,7,WR,So.,"Corpus Christi, TX",Veterans Memorial HS,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/gray_derrick_1r2a
-su,Schreiner,Casen Warren,7,CB,Fr.,"Houston, TX",Cypress Falls HS,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/warren_casen_l5sv
-su,Schreiner,Christian Lora,8,RB,So.,"Kingwood, TX",Kingwood Park HS,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/lora_christian_ie0r
-su,Schreiner,Markhas Rose,8,DL,So.,"Harper, TX",Harper HS,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/rose_markhas_luyl
-su,Schreiner,Luke Burkhalter,9,OLB,Fr.,"Lumberton, TX",Lumberton HS,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/burkhalter_luke_x25i
-su,Schreiner,Ezra Morgan,9,QB,So.,"Luling, TX",Texas Virtual Academy,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/morgan_ezra_eq9q
-su,Schreiner,Vincent Reyes,10,ILB,So.,"Pearland, TX",Shadow Creek HS,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/reyes_vincent_4c6w
-su,Schreiner,Will Spaulding,10,RB,So.,"Somerset, TX",Somerset HS,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/spaulding_robert_exqm
-su,Schreiner,Jacari Killingsworth,11,QB,Jr.,"Round Rock, TX",Cedar Ridge HS,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/killingsworth_maurice_1cmp
-su,Schreiner,Caleb Sosa,11,DE,So.,"Spring Branch, TX",Smithson Valley HS,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/sosa_caleb_ppti
-su,Schreiner,Davis Holladay,12,DB,Fr.,"Frankston, TX",Frankston HS,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/holladay_davis_a0pb
-su,Schreiner,Major Luna,12,QB,Fr.,"Poth, TX",Poth HS,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/luna_major_6wiv
-su,Schreiner,Carson Jones,13,WR,So.,"Kerrville, TX",Tivy HS,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/jones_carson_0gfc
-su,Schreiner,Marcus Troy,13,DB,Fr.,"San Antonio, TX",Seguin HS,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/troy_marcus_hwir
-su,Schreiner,Darren Hurtado,14,DE,Fr.,"Coleman, TX",Coleman HS,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/hurtado_darren_4mn8
-su,Schreiner,Re Char Johnson,14,OLB,Fr.,"Houston, TX",Davis HS,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/johnson_re_char_6o6a
-su,Schreiner,Maxwell Smith,14,QB,So.,"Centerville, TX",Centerville HS,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/smith_maxwell_cf8d
-su,Schreiner,Gabriel Collins,15,DB,Fr.,"Houston, TX",Cypress Falls HS,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/collins_gabriel_rv37
-su,Schreiner,Dominic Davis,15,DE,Fr.,"Azle, TX",Jarvis HS,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/davis_dominic_de6c
-su,Schreiner,Cade Jones,15,WR,So.,"Kerrville, TX",Tivy HS,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/jones_cade_pa04
-su,Schreiner,Brady Criswell,16,DB,So.,"Shallowater, TX",Shallowater HS,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/criswell_brady_csi1
-su,Schreiner,Xaiver Gonzalez,16,QB,Fr.,"Castroville, TX",Medina Valley HS,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/gonzalez_xaiver_74xy
-su,Schreiner,Cameron Floyd,17,DB,Fr.,"Paris, TX",Paris HS,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/floyd_cameron_haka
-su,Schreiner,JD Linnstaedter,17,QB,Fr.,"Montgomery, TX",Legacy Prep Christian Academy,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/linnstaedter_james_th6e
-su,Schreiner,Alexander Manning,18,QB,Fr.,"Corpus Christi, TX",London HS,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/manning_alexander_uvf8
-su,Schreiner,Bryce Warren,18,K,So.,"Victoria, TX",Industrial HS,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/warren_bryce_7yre
-su,Schreiner,Devonte Mckenzie,19,DE,So.,"La Grange, TX",La Grange HS,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/mckenzie_devonte_2175
-su,Schreiner,Isaac Torres,19,WR,So.,"Van Ormy, TX",Southwest Legacy HS,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/torres_isaac_85p3
-su,Schreiner,Benjamin Hatcher,20,WR,Fr.,"Austin, TX",Anderson HS,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/hatcher_benjamin_xvd2
-su,Schreiner,John Medaris,20,CB,So.,"Dallas, TX",Bishop Lynch HS,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/medaris_john_rn3r
-su,Schreiner,Major Holland,21,DB,So.,"Corpus Christi, TX",King HS,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/holland_major_k92j
-su,Schreiner,Tylor Simpson,21,RB,So.,"Corpus Christi, TX",Flour Bluff HS,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/simpson_tylor_h7go
-su,Schreiner,Nicholas Hall,22,WR,So.,"San Antonio, TX",Holy Cross San Antonio,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/hall_nicholas_h19d
-su,Schreiner,Andrew Henley,22,ILB,Fr.,"Victoria, TX",Victoria West HS,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/henley_andrew_b2pk
-su,Schreiner,Zakary Blanchard,23,DB,Fr.,"Beaumont, TX",West Brook HS,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/blanchard_zakary_q3ip
-su,Schreiner,Domynik Vasquez,23,RB,So.,"Kerrville, TX",Tivy HS,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/vasquez_domynik_w8zd
-su,Schreiner,Nicholas Hayes,24,CB,Fr.,"San Antonio, TX",Cornerstone Christian,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/hayes_nicholas_j1av
-su,Schreiner,Jason Ortiz,24,RB,Fr.,"Leander, TX",Glenn HS,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/ortiz_jason_hjx4
-su,Schreiner,Marcus Potts,24,OLB,Fr.,"Houston, TX",Eisenhower HS,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/potts_marcus_175v
-su,Schreiner,Tyler Gilmore,25,RB,Fr.,"Houston, TX",Morton Ranch HS,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/gilmore_tyler_ekl7
-su,Schreiner,Colby Morgan,25,DB,Fr.,"Dayton, TX",Barbers Hill HS,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/morgan_colby_vn43
-su,Schreiner,Julian Johnson,26,WR; DB,Fr.,"Corpus Christi, TX",Flour Bluff HS,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/tijerina_julian_qamf
-su,Schreiner,Jameriest Williams,26,CB,Fr.,"Garland, TX",Garland HS,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/williams_jamriest_mwg5
-su,Schreiner,Devin Eure,27,DB,Jr.,"Quakertown, PA",Quakertown Community HS,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/eure_devin_sxly
-su,Schreiner,Aiden Martinez,27,RB,Fr.,"Agua Dulce, TX",Agua Dulce HS,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/martinez_aiden_ys9l
-su,Schreiner,Peyton Lopez,28,RB,Fr.,"Burnet, TX",Burnet HS,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/lopez_peyton_e3tb
-su,Schreiner,Bubba Medrano,28,CB,Fr.,"Harlingen, TX",Harlingen HS,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/medrano_derek_bdm3
-su,Schreiner,Sebastian Perez,29,Kicker,Fr.,"Katy, TX",Katy HS,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/perez_sebastian_lnvl
-su,Schreiner,Marcos Salas,29,RB,Fr.,"Kenedy, TX",Kenedy HS,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/salas_marcos_76au
-su,Schreiner,Peculiar Henry,30,ILB,Fr.,"Mansfield, TX",Mansfield Lake Ridge HS,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/henry_peculiar_gwru
-su,Schreiner,Jaydon Hallock,31,CB,Fr.,"Heath, TX",Richardson HS,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/hallock_jaydon_crfz
-su,Schreiner,Kaden Williams,32,DB; CB,Fr.,"Conroe, TX",Conroe HS,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/williams_kaden_ukua
-su,Schreiner,Corin Ramesar,33,Kicker,Fr.,"Belton, TX",Belton HS,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/ramesar_corin_ctzb
-su,Schreiner,Aidan Varwig,33,RB,So.,"Kerrville, TX",McPherson College,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/varwig_aidan_tx4g
-su,Schreiner,Cole Hirsch,34,TE,So.,"San Antonio, TX",Steele HS,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/hirsch_cole_ikra
-su,Schreiner,Isahia Hinds,37,WR,Fr.,"San Antonio, TX",South San Antonio HS,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/hinds_isahia_c20r
-su,Schreiner,Cedrick Jones,37,CB,Fr.,"Silsbee, TX",Silsbee HS,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/jones_cedrick_s14g
-su,Schreiner,Luke Silguero,38,LS,Fr.,"Cedar Park, TX",Cedar Park HS,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/silguero_luke_qvuk
-su,Schreiner,Traey Alvarado,39,RB,Fr.,"Rockport, TX",Rockport-Fulton HS,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/alvarado_traey_ymci
-su,Schreiner,Theodis Fields,40,RB,Fr.,"Katy, TX",Cypress Lakes HS,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/fields_theodis_x7qp
-su,Schreiner,Wyatt Porowski,40,ILB; OLB,Fr.,"Cedar Park, TX",Vista Ridge HS,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/porowski_wyatt_7iek
-su,Schreiner,Ellis Rodgers,41,DE,Fr.,"Spring, TX",Klein Collins HS,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/rodgers_ellis_2pf0
-su,Schreiner,Kenneth Peck Jr,42,DB,Fr.,"Mansfield, TX",South Grand Prairie HS,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/peck_jr_kenneth_yvhb
-su,Schreiner,Kolton Strey,43,OLB,Fr.,"Corpus Christi, TX",Flour Bluff HS,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/strey_kolton_x48i
-su,Schreiner,Christian Doiron,44,DE,So.,"Kingwood, TX",Kingwood HS,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/doiron_christian_uoi4
-su,Schreiner,Tobi Oladeinde,45,OLB,Fr.,"Richmond, TX",George Bush HS,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/oladeinde_oluwatobloba_qzsi
-su,Schreiner,Johnny Guajardo,46,LS,Fr.,"Katy, TX",Cypress Lakes HS,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/guajardo_johnny_ihur
-su,Schreiner,Ty Weaver,47,ILB,Fr.,"Robinson, TX",Robinson HS,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/weaver_ty_ilnq
-su,Schreiner,Julius Johnson,48,RB,So.,"San Antonio, TX",Sotomayor HS,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/johnson_julius_gi6t
-su,Schreiner,Orlando Martinez,48,ILB,Fr.,"Edinburg, TX",Edinburg HS,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/martinez_orlando_689x
-su,Schreiner,Mason Madtes,49,TE,Fr.,"San Antonio, TX",Roosevelt HS,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/madtes_mason_38wk
-su,Schreiner,Adrian Agbasoga,50,ILB,Fr.,"Leander, TX",Rouse HS,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/abasoga_adrian_l5dp
-su,Schreiner,Hayden Donovan,50,OL,Fr.,"Garland, TX",Garland HS,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/donovan_hayden_bh66
-su,Schreiner,Tory Iles,52,OL,Fr.,"Port Arthur, TX",Memorial HS,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/iles_tory_efto
-su,Schreiner,Ethan Jones,53,OL,So.,"Buda, TX",Hays HS,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/jones_ethan_mxw9
-su,Schreiner,Kaleb Gowens,54,OL,Fr.,"Dallas, TX",Lake Highlands HS,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/gowens_kaleb_arl4
-su,Schreiner,Luke Lorenzen,55,ILB,Fr.,"Johnson City, TX",Johnson City HS,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/lorenzen_luke_giut
-su,Schreiner,Dakota Marak,56,OL,Fr.,"Taylor, TX",Thrall HS,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/marak_dakota_x2ch
-su,Schreiner,Nicholas McPherson,56,DL,Fr.,"Kenedy, TX",Kenedy HS,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/mcpherson_nicholas_nmx9
-su,Schreiner,Caden Lieck,58,DB,Fr.,"Spring Branch, TX",Smithson Valley HS,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/lieck_caden_c5vb
-su,Schreiner,Matthew Howard,59,OL,Fr.,"Corpus Christi, TX",Flour Bluff HS,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/howard_matthew_pxi0
-su,Schreiner,Logan Reed,60,OL,Fr.,"Rosenberg, TX",Dr. Thomas E. Randle HS,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/reed_logan_9hol
-su,Schreiner,David Bryson,61,OL,Fr.,"Katy, TX",Tompkins HS,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/bryson_david_9unb
-su,Schreiner,Kaleb Merchant,62,OL,So.,"Huntsville, TX",Huntsville HS,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/merchant_kaleb_5vb5
-su,Schreiner,Clint Glass,63,OL,Fr.,"San Antonio, TX",Smithson Valley HS/ Hardin Simmons,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/glass_clint_f15t
-su,Schreiner,Michael Torres,63,DL,So.,"Port Isabel, TX",Port Isabel HS,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/torres_michael_ysgb
-su,Schreiner,Alexander Vick,64,OL,Fr.,"Austin, TX",Dripping Springs HS,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/vick_alexander_k9ix
-su,Schreiner,Nathaniel Evans,65,OL,Fr.,"Bandera, TX",Bandera HS,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/evans_nathaniel_32pa
-su,Schreiner,Maximus Jackson,66,OL,Fr.,"Houston, TX",Davis HS,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/jackson_maximus_uj5c
-su,Schreiner,Logan Harman,67,OL,Fr.,"Pipe Creek, TX",Bandera HS,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/harmon_logan_su1o
-su,Schreiner,Evan Guardiola,68,OL,So.,"Pleasanton, TX",Pleasanton HS,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/guardiola_evan_6kxv
-su,Schreiner,Michael Gonzales,69,OL,Fr.,"Richmond, TX",George Ranch HS,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/gonzales_michael_hf2b
-su,Schreiner,Brandon Castenada,70,DL,Sr.,/ Northeastern State University,,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/castaneda_brandon_754p
-su,Schreiner,Layton Kopycinski,71,OL,Fr.,"Lake Jackson, TX",Brazoswood HS,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/kopycinski_layton_kec8
-su,Schreiner,Erik Sanchez,72,OL,Fr.,"Sealy, TX",Sealy HS,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/sanchez_erik_g6wy
-su,Schreiner,Noah Jenkins,73,OL,Fr.,"Baytown, TX",Barbers Hill HS,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/jenkins_noah_akzd
-su,Schreiner,James McKinney,73,OL,Fr.,"Edgecliff Village, TX",Grace Preparatory Academy,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/mckinney_james_e1vl
-su,Schreiner,Omar Williams,74,OL,Fr.,"Cibolo, TX",Theodore Roosevelt HS,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/williams_omar_alel
-su,Schreiner,Talon Brengman,75,OL,Fr.,"Corpus Christi, TX",Flour Bluff HS,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/brengman_talon_2i20
-su,Schreiner,Jaquan Justice,76,OL,Fr.,"Killeen, TX",Ellison High School,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/justice_jaquan_d3j3
-su,Schreiner,Thor Bass,78,OL,Fr.,"Refugio, TX",Refugio HS,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/bass_thor_4q0x
-su,Schreiner,Mohamed Ndiaye,79,OL,Fr.,"San Angelo, TX",Texas Leadership Charter Academy,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/ndiaye_mohamed_pmfd
-su,Schreiner,Henry Hughes,80,TE/DE,Fr.,"League City, TX",Lutheran South Academy,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/hughes_henry_dqx6
-su,Schreiner,Alejandro Rodriguez,80,WR,Fr.,"San Antonio, TX",Southwest Legacy HS,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/rodriguez_alejandro_a44b
-su,Schreiner,Riley Conlee,81,LS,So.,/ Hardin Simmons University,,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/conlee_riley_294f
-su,Schreiner,Jett Flores,81,WR,Fr.,"Uvalde, TX",Uvalde HS,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/flores_jett_1oi9
-su,Schreiner,Isaiah Cathey,82,WR,Fr.,"Cibolo, TX",Steele HS,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/cathey_isaiah_sp05
-su,Schreiner,Cameron McGinnis,83,Kicker,Fr.,"Portland, TX",Gregory-Portland HS,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/mcginnis_cameron_7690
-su,Schreiner,Cash Myers,83,WR; DB,Fr.,"Austin, TX",St. Andrew's Episcopal School,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/meyers_matthew_x2f5
-su,Schreiner,DeMarcus Davis,84,WR,Fr.,"Leander, TX",Tom Glenn HS,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/davis_de-marcus_qici
-su,Schreiner,Jamari Klembara-Chilton,87,WR,Fr.,"San Antonio, TX",Harlan HS,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/klembara-chilton_jamari_jof8
-su,Schreiner,Malachi Brooks-Hoodye,88,DL,So.,"Beeville, TX",AC Jones HS,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/brooks-hoodye_malichi_6fx8
-su,Schreiner,Bryson Edmon,88,WR,Fr.,"Houston, TX",Westfield HS,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/edmond_bryson_apeh
-su,Schreiner,Shaun Evans,89,WR,Fr.,"San Antonio, TX",Brandeis HS,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/evans_shaun_2gen
-su,Schreiner,Jared Martinez,89,DE,Fr.,"Uvalde, TX",Uvalde HS,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/martinez_jared_5u3j
-su,Schreiner,Joaquin Martinez,90,DE,So.,"San Antonio, TX",Clark HS,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/martinez_joaquin_664q
-su,Schreiner,Ja'kiree Teal,92,ILB,Fr.,"Killeen, TX",C E Ellison HS,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/teal_ja-kiree_d1o7
-su,Schreiner,Dylan Daniels,93,DE,Fr.,"Pflugerville, TX",Pflugerville HS,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/daniels_dylan_2232
-su,Schreiner,Christopher Alva,94,OL,Fr.,"Ingram,TX",Tom Moore HS,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/alva_christopher_dg2u
-su,Schreiner,Lawrence Carter,95,DE,Fr.,Elm Mott,Connally HS,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/carter_lawrence_f0xl
-su,Schreiner,Jonah Kalu,96,DE,Fr.,"Missouri City, TX",Fort Bend Baptist Academy,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/kalu_jonah_c17g
-su,Schreiner,Christopher Gonzalez,99,DE,So.,"Port Isabel, TX",Port Isabel HS,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/gonzalez_christopher_jt8l
-su,Schreiner,Francisco Munoz,99,TE,Fr.,"Zapata, TX",Zapata HS,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/munoz_francisco_toaj
-su,Schreiner,Gerardo Nunez,,CB,So.,"Austin,TX",Austin Achieve HS,,,,https://schreinermountaineers.com/sports/fball/2026-27/bios/nunez_gerardo_d66m
