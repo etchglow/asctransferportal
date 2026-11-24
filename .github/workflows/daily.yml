@@ -12,6 +12,7 @@ on:
 
 permissions:
   contents: write        # commit updated data/ and docs/ back to the repo
+  issues: write          # open the daily "new players" issue, which GitHub emails you
 
 concurrency:
   group: portal-scan     # never run two scans at once (their saved state would conflict)
@@ -29,6 +30,9 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+
+      - name: Remember yesterday's tracker
+        run: cp data/tracker.csv "$RUNNER_TEMP/old_tracker.csv" || true
 
       - name: Refresh rosters (Mondays, or when asked)
         run: |
@@ -58,4 +62,22 @@ jobs:
             git commit -m "Daily portal scan $(date -u +%Y-%m-%d)"
             git pull --rebase
             git push
+          fi
+
+      - name: Email new players (via a GitHub issue)
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python new_entries.py "$RUNNER_TEMP/old_tracker.csv" data/tracker.csv "$RUNNER_TEMP/new.md"
+          if [ -s "$RUNNER_TEMP/new.md" ]; then
+            {
+              echo "@${{ github.repository_owner }} the daily scan found:"
+              echo
+              cat "$RUNNER_TEMP/new.md"
+              echo
+              echo "Full tracker: https://${GITHUB_REPOSITORY_OWNER}.github.io/${GITHUB_REPOSITORY#*/}/"
+              echo
+              echo "_Close this issue once you've looked. Wrong? Add a \`not_portal\` row to data/overrides.csv._"
+            } > "$RUNNER_TEMP/issue.md"
+            gh issue create --title "New portal entries $(date -u +%Y-%m-%d)" --body-file "$RUNNER_TEMP/issue.md"
           fi

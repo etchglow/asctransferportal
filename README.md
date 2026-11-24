@@ -21,6 +21,9 @@ Edit this file on GitHub to correct the tracker or add players the search can't 
 | `not_portal` | hides a false positive |
 | `committed` | marks a player committed elsewhere; put the new school in `note` |
 
+## Daily email
+When a scan finds new players, or a Likely player posts with portal wording, the workflow opens an issue titled "New portal entries YYYY-MM-DD" that @-mentions you. GitHub emails it to you. No issue is opened on quiet days. Close each issue once you've read it. If emails don't arrive, check github.com/settings/notifications: "Participating, @mentions and custom" should have Email turned on.
+
 ## Adding a player's handle
 Handles are what find players who never name their school. Two ways to add one:
 - **From your phone or browser:** Issues → New issue → **Add player handle**. Pick the school, enter the name and @handle, and optionally paste their portal post link. A workflow adds the handle to `data/handles_manual.csv`, puts the player on the tracker if you gave a link, rebuilds the page, and closes the issue with a comment. Only issues you open trigger it.
