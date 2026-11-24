@@ -9,6 +9,14 @@ on:
         description: "Re-scrape the ASC rosters too"
         type: boolean
         default: false
+      rescan_since:
+        description: "Re-read teammates' posts from this date (YYYY-MM-DD), e.g. to test image OCR. Blank = normal run"
+        type: string
+        default: ""
+      school:
+        description: "Limit the teammate scan to one school id (e.g. umhb). Blank = all"
+        type: string
+        default: ""
 
 permissions:
   contents: write        # commit updated data/ and docs/ back to the repo
@@ -45,8 +53,24 @@ jobs:
       - name: Search X by school name and player accounts
         run: python x_search.py --max-posts 200
 
+      - name: Install OCR (reads text in announcement graphics)
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq tesseract-ocr > /dev/null
+
       - name: Scan teammates' reposts
-        run: python teammate_scan.py --max-per-user 30
+        env:
+          RESCAN_SINCE: ${{ inputs.rescan_since }}
+          SCHOOL: ${{ inputs.school }}
+        run: |
+          args="--max-per-user 30"
+          if [ -n "$RESCAN_SINCE" ]; then
+            [[ "$RESCAN_SINCE" =~ ^[0-9]{4}-[0-9]{2}-[0-9]{2}$ ]] || { echo "rescan_since must be YYYY-MM-DD"; exit 1; }
+            args="$args --rescan --since $RESCAN_SINCE"
+          fi
+          if [ -n "$SCHOOL" ]; then
+            [[ "$SCHOOL" =~ ^[a-z]{2,5}$ ]] || { echo "school must be an id like umhb"; exit 1; }
+            args="$args --school $SCHOOL"
+          fi
+          python teammate_scan.py $args
 
       - name: Build tracker page
         run: python build_tracker.py

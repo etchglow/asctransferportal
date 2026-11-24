@@ -15,6 +15,11 @@ Signal strength:
             "DMs open"). Counted only when the author is on a roster, since high-school
             recruits post the same phrases.
 New hits go to data/x_posts.jsonl. Handles of roster-matched authors go to handles_manual.csv.
+
+Image OCR: many announcements are a graphic with no wording in the post itself. When
+Tesseract is installed (the GitHub Action installs it), photos are read with OCR for
+posts with no portal wording whose author is a rostered player or names the school in
+their bio. Without Tesseract this step is skipped.
 """
 from __future__ import annotations
 
@@ -22,8 +27,14 @@ import argparse
 import csv
 import datetime as dt
 import json
+import os
 import re
+import shutil
+import subprocess
 import sys
+import tempfile
+import urllib.parse
+import urllib.request
 
 from x_search import DATA, POSTS, call_api, load_watchlist, redact
 
@@ -35,6 +46,31 @@ WEAK = re.compile(
     r"|\d\s*(\+\s*)?(yrs?|years?)\s+(of\s+)?eligibility|eligibility\s+(remaining|left)"
     r"|ncaa\s*(id|#)|dms?\s+(are\s+)?open|uncommitted|continue (my|playing).{0,40}(career|next level)",
     re.I)
+
+
+def find_tesseract() -> str | None:
+    return shutil.which("tesseract") or next(
+        (p for p in (r"C:\Program Files\Tesseract-OCR\tesseract.exe",) if os.path.exists(p)), None)
+
+
+def ocr_image(url: str, exe: str) -> str:
+    """Download an X photo and return its text. Only pbs.twimg.com images are fetched."""
+    u = urllib.parse.urlparse(url)
+    if u.scheme != "https" or u.hostname != "pbs.twimg.com":
+        return ""
+    fd, path = tempfile.mkstemp(suffix=os.path.splitext(u.path)[1] or ".jpg")
+    os.close(fd)
+    try:
+        req = urllib.request.Request(f"{url}?name=large", headers={"User-Agent": "asc-portal-monitor/0.1"})
+        with urllib.request.urlopen(req, timeout=30) as r, open(path, "wb") as f:
+            f.write(r.read(10_000_000))
+        out = subprocess.run([exe, path, "stdout"], capture_output=True, text=True, timeout=60)
+        return " ".join(out.stdout.split())
+    except Exception as e:  # a failed image shouldn't stop the scan
+        print(f"  OCR failed for {url}: {e}")
+        return ""
+    finally:
+        os.remove(path)
 
 
 def norm_words(s: str) -> set[str]:
@@ -93,8 +129,12 @@ def main() -> int:
     ap.add_argument("--school", help="school id; default all schools")
     ap.add_argument("--since", help="YYYY-MM-DD for accounts never scanned (default: 14 days ago)")
     ap.add_argument("--max-per-user", type=int, default=30, help="posts per account per run (cost cap)")
+    ap.add_argument("--rescan", action="store_true", help="read every account from --since again, ignoring where the last scan stopped")
+    ap.add_argument("--no-ocr", action="store_true", help="skip reading text from images")
     ap.add_argument("--dry-run", action="store_true")
     a = ap.parse_args()
+    tess = None if a.no_ocr else find_tesseract()
+    print(f"Image OCR: {'on' if tess else 'off (Tesseract not installed)' if not a.no_ocr else 'off'}")
 
     schools = json.loads((DATA.parent / "schools.json").read_text(encoding="utf-8"))["schools"]
     if a.school:
@@ -113,17 +153,19 @@ def main() -> int:
         return 0
 
     found: dict[str, dict] = {}
-    read = 0
+    read = ocr_count = 0
     for s in schools:
         ids = lookup_ids(plan[s["id"]], state["ids"])
         for handle, uid in ids.items():
             params = {
                 "max_results": max(5, min(100, a.max_per_user)),
-                "expansions": "author_id,referenced_tweets.id.author_id",
-                "tweet.fields": "created_at,referenced_tweets,note_tweet,author_id",
+                "expansions": "author_id,referenced_tweets.id.author_id,attachments.media_keys,"
+                              "referenced_tweets.id.attachments.media_keys",
+                "tweet.fields": "created_at,referenced_tweets,note_tweet,author_id,attachments",
                 "user.fields": "name,username,description",
+                "media.fields": "type,url",
             }
-            if state["since_id"].get(handle):
+            if state["since_id"].get(handle) and not a.rescan:
                 params["since_id"] = state["since_id"][handle]
             else:
                 params["start_time"] = f"{since}T00:00:00Z"
@@ -131,25 +173,40 @@ def main() -> int:
             own = res.get("data", [])
             read += len(own)
             if own:
-                state["since_id"][handle] = max((t["id"] for t in own), key=int)
+                newest = max((t["id"] for t in own), key=int)
+                if int(newest) > int(state["since_id"].get(handle) or 0):
+                    state["since_id"][handle] = newest
             users = {u["id"]: u for u in res.get("includes", {}).get("users", [])}
+            media = {m["media_key"]: m for m in res.get("includes", {}).get("media", [])}
             # Candidates: the player's own original posts, plus every post they reposted or quoted.
             cands = [t for t in own if not t.get("referenced_tweets")] + res.get("includes", {}).get("tweets", [])
             for t in cands:
                 if t["id"] in seen or t["id"] in found:
                     continue
                 text = t.get("note_tweet", {}).get("text") or t.get("text", "")
-                strong, weak = bool(STRONG.search(text)), bool(WEAK.search(text))
-                if not (strong or weak):
-                    continue
                 author = users.get(t.get("author_id"), {})
                 players = rosters.match(author)
                 if len(players) > 1:  # same name at two schools: prefer this school
                     players = [p for p in players if p["school_id"] == s["id"]] or players
+                bio = (author.get("description", "") + " " + text).lower()
+                tied = bool(players) or any(x.lower() in bio for x in s["aliases"])
+                strong, weak = bool(STRONG.search(text)), bool(WEAK.search(text))
+                via_ocr = False
+                if not (strong or weak) and tess and tied:
+                    # No wording in the post: read any photos, which is where the graphic says "portal".
+                    photos = [media[k]["url"] for k in t.get("attachments", {}).get("media_keys", [])
+                              if k in media and media[k].get("type") == "photo" and media[k].get("url")]
+                    img_text = " ".join(ocr_image(u, tess) for u in photos[:4])
+                    ocr_count += len(photos[:4])
+                    if img_text and (STRONG.search(img_text) or WEAK.search(img_text)):
+                        strong, weak = bool(STRONG.search(img_text)), bool(WEAK.search(img_text))
+                        text = f"{text}\n[image text] {img_text[:400]}"
+                        via_ocr = True
+                if not (strong or weak):
+                    continue
                 if not players and not strong:
                     continue  # weak wording from an unknown account: probably a recruit
-                bio = (author.get("description", "") + " " + text).lower()
-                if not players and not any(x.lower() in bio for x in s["aliases"]):
+                if not tied:
                     continue  # portal post from someone with no visible tie to this school
                 found[t["id"]] = {
                     "id": t["id"],
@@ -158,7 +215,7 @@ def main() -> int:
                     "username": author.get("username"), "author_name": author.get("name"),
                     "text": redact(text), "url": f'https://x.com/{author.get("username", "i")}/status/{t["id"]}',
                     "players": [f'{p["name"]} ({p["school_id"]}, {p["position"]})' for p in players],
-                    "found_via": f"teammate:@{handle}" if t.get("author_id") != uid else "timeline",
+                    "found_via": (f"teammate:@{handle}" if t.get("author_id") != uid else "timeline") + (" +ocr" if via_ocr else ""),
                     "signal": "strong" if strong else "weak",
                 }
 
@@ -179,7 +236,7 @@ def main() -> int:
             csv.writer(f).writerows(new_handles)
     STATE.write_text(json.dumps(state, indent=1))
 
-    print(f"\n{read} posts read, {len(found)} new portal-like posts, {len(new_handles)} new handles saved")
+    print(f"\n{read} posts read, {ocr_count} images OCR'd, {len(found)} new portal-like posts, {len(new_handles)} new handles saved")
     for r in sorted(found.values(), key=lambda r: (r["school_id"], r["created_at"])):
         who = ", ".join(r["players"]) or "not on roster (school named in bio/post)"
         print(f'\n[{r["school_id"]}] {r["created_at"][:10]} {r["signal"]:<6} @{r["username"]} -> {who}  ({r["found_via"]})')

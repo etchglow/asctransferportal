@@ -62,6 +62,9 @@ Useful extras:
 | `data/tracker.csv`, `docs/index.html` | The tracker output. |
 | `data/x_state.json`, `data/teammate_state.json` | Where each search left off, so runs only read new posts. |
 
+## Image OCR
+Many announcements are just a graphic. The Action installs Tesseract (free OCR), and `teammate_scan.py` reads the photos on posts that have no portal wording, but only when the author is a rostered player or names the school in their bio. Hits show `+ocr` in `found_via`. To re-check older reposts, go to **Actions → Daily portal scan → Run workflow** and set `rescan_since` (e.g. `2026-11-01`) and optionally `school` (e.g. `umhb`). A rescan re-reads up to 30 posts per account, about $0.15 per account.
+
 ## Known gaps
-- Image-only posts are found only if a known teammate reposts them.
+- Image-only posts are found only if a known teammate reposts them (or the player is a known account), and OCR can miss heavily stylized lettering.
 - Howard Payne and Schreiner have no known player accounts yet. Add handles to `handles_manual.csv` to cover them.
