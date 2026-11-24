@@ -1,0 +1,60 @@
+name: Daily portal scan
+
+on:
+  schedule:
+    - cron: "0 13 * * *"   # every day at 13:00 UTC (7am Central standard time, 8am daylight time)
+  workflow_dispatch:
+    inputs:
+      refresh_rosters:
+        description: "Re-scrape the ASC rosters too"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write        # commit updated data/ and docs/ back to the repo
+
+concurrency:
+  group: portal-scan     # never run two scans at once (their saved state would conflict)
+  cancel-in-progress: false
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      X_BEARER_TOKEN: ${{ secrets.X_BEARER_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Refresh rosters (Mondays, or when asked)
+        run: |
+          if [ "${{ inputs.refresh_rosters }}" = "true" ] || [ "$(date -u +%u)" = "1" ]; then
+            python build_watchlist.py
+          else
+            echo "Not Monday; keeping the current watchlist."
+          fi
+
+      - name: Search X by school name and player accounts
+        run: python x_search.py --max-posts 200
+
+      - name: Scan teammates' reposts
+        run: python teammate_scan.py --max-per-user 30
+
+      - name: Build tracker page
+        run: python build_tracker.py
+
+      - name: Commit results
+        run: |
+          git config user.name "portal-scan-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data docs
+          if git diff --cached --quiet; then
+            echo "No changes."
+          else
+            git commit -m "Daily portal scan $(date -u +%Y-%m-%d)"
+            git push
+          fi

@@ -1,0 +1,59 @@
+{
+  "_note": "ASC football programs for the 2026 season (from ascsports.org standings). Edit this list when membership changes.",
+  "schools": [
+    {
+      "id": "hsu",
+      "name": "Hardin-Simmons",
+      "nickname": "Cowboys",
+      "aliases": ["Hardin-Simmons", "Hardin Simmons", "HSU Cowboys", "HSUTX"],
+      "platform": "sidearm",
+      "roster_url": "https://hsuathletics.com/sports/football/roster",
+      "team_x": ["HSUCowboys"]
+    },
+    {
+      "id": "umhb",
+      "name": "Mary Hardin-Baylor",
+      "nickname": "Crusaders",
+      "aliases": ["Mary Hardin-Baylor", "Mary Hardin Baylor", "UMHB", "Cru Football"],
+      "platform": "sidearm",
+      "roster_url": "https://cruathletics.com/sports/football/roster",
+      "team_x": ["crufootball", "crusports"]
+    },
+    {
+      "id": "hpu",
+      "name": "Howard Payne",
+      "nickname": "Yellow Jackets",
+      "aliases": ["Howard Payne", "HPU Yellow Jackets", "HPUTX"],
+      "platform": "sidearm",
+      "roster_url": "https://hpusports.com/sports/football/roster",
+      "team_x": ["hputxfootball", "hputxsports"]
+    },
+    {
+      "id": "etbu",
+      "name": "East Texas Baptist",
+      "nickname": "Tigers",
+      "aliases": ["East Texas Baptist", "ETBU"],
+      "platform": "sidearm",
+      "roster_url": "https://goetbutigers.com/sports/football/roster",
+      "team_x": ["ETBU_Football", "EtbuFootball"]
+    },
+    {
+      "id": "mcm",
+      "name": "McMurry",
+      "nickname": "War Hawks",
+      "aliases": ["McMurry", "McM War Hawks"],
+      "platform": "sidearm",
+      "roster_url": "https://mcmurrysports.com/sports/football/roster",
+      "team_x": ["mcmsports"]
+    },
+    {
+      "id": "su",
+      "name": "Schreiner",
+      "nickname": "Mountaineers",
+      "aliases": ["Schreiner", "Schreiner University"],
+      "platform": "presto",
+      "roster_url": "https://schreinermountaineers.com/sports/fball/2026-27/roster",
+      "team_x": ["sumountaineers"]
+    }
+  ]
+}
