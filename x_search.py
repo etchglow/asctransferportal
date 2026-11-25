@@ -136,8 +136,38 @@ def load_watchlist() -> list[dict]:
         return list(csv.DictReader(f))
 
 
-def match_players(text: str, author: dict, school_id: str, roster: list[dict]) -> list[str]:
-    """Watchlist players whose full name appears in the post or the author's name/bio."""
+def known_handles(roster: list[dict]) -> dict[str, dict]:
+    """lowercased X handle -> player, from the watchlist plus handles_manual.csv
+    (manual players who aren't on a roster still count)."""
+    out = {p["x_handle"].lower(): p for p in roster if p.get("x_handle")}
+    manual = DATA / "handles_manual.csv"
+    if manual.exists():
+        by_name = {(p["school_id"], p["name"].lower()): p for p in roster}
+        with manual.open(newline="", encoding="utf-8") as f:
+            for r in csv.DictReader(f):
+                h = r.get("x_handle", "").lstrip("@").lower()
+                if h:
+                    out[h] = by_name.get((r["school_id"], r["name"].lower())) or {
+                        "school_id": r["school_id"], "name": r["name"], "position": "?", "x_handle": h}
+    return out
+
+
+def tagged_players(text: str, handles: dict[str, dict]) -> list[str]:
+    """Known players @-mentioned in a post, e.g. a news account's "PORTAL NEWS: ... @Porterjr2Jr".
+    Returns 'Name (school_id, POS)' strings like match_players."""
+    out = []
+    for h in re.findall(r"@(\w{1,15})", text or ""):
+        p = handles.get(h.lower())
+        if p:
+            s = f'{p["name"]} ({p["school_id"]}, {p["position"]})'
+            if s not in out:
+                out.append(s)
+    return out
+
+
+def match_players(text: str, author: dict, school_id: str, roster: list[dict], handles: dict[str, dict] | None = None) -> list[str]:
+    """Watchlist players whose full name appears in the post or the author's name/bio.
+    If none, known players the post @-mentions (news and edits accounts tag the player)."""
     hay = " ".join([text, author.get("name", ""), author.get("description", "")]).lower()
     words = set(re.findall(r"[a-z]+", re.sub(r"['’`]", "", hay)))
     handle = author.get("username", "").lower()
@@ -148,6 +178,8 @@ def match_players(text: str, author: dict, school_id: str, roster: list[dict]) -
         named = p["name"].lower() in hay or (len(parts) > 1 and parts[0] in words and parts[-1] in words)
         if p["name"] and (named or (p["x_handle"] and p["x_handle"].lower() == handle)):
             hits.append(f'{p["name"]} ({p["school_id"]}, {p["position"]}){"" if p["school_id"] == school_id else " *other school*"}')
+    if not hits and handles:
+        hits = tagged_players(text, handles)
     return hits
 
 
@@ -166,6 +198,7 @@ def main() -> int:
     if a.school:
         schools = [s for s in schools if s["id"] == a.school]
     roster = load_watchlist()
+    handles = known_handles(roster)
     queries = build_queries(schools, player_handles(roster))
     if a.dry_run:
         for sid, q in queries:
@@ -217,7 +250,7 @@ def main() -> int:
                     "id": p["id"], "school_id": sid, "created_at": p.get("created_at"),
                     "username": u.get("username"), "author_name": u.get("name"),
                     "text": redact(p.get("text", "")), "url": f'https://x.com/{u.get("username", "i")}/status/{p["id"]}',
-                    "players": match_players(p.get("text", ""), u, sid, roster),
+                    "players": match_players(p.get("text", ""), u, sid, roster, handles),
                     "found_via": endpoint,
                 }
                 new.append(rec)

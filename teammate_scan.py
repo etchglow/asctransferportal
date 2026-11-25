@@ -186,7 +186,12 @@ def main() -> int:
                 text = t.get("note_tweet", {}).get("text") or t.get("text", "")
                 author = users.get(t.get("author_id"), {})
                 players = rosters.match(author)
-                if len(players) > 1:  # same name at two schools: prefer this school
+                tagged = False
+                if not players:  # a news/edits account: credit the known players it @-mentions
+                    players = [rosters.by_handle[h.lower()] for h in dict.fromkeys(re.findall(r"@(\w{1,15})", text))
+                               if h.lower() in rosters.by_handle]
+                    tagged = bool(players)
+                if len(players) > 1 and not tagged:  # same name at two schools: prefer this school
                     players = [p for p in players if p["school_id"] == s["id"]] or players
                 bio = (author.get("description", "") + " " + text).lower()
                 tied = bool(players) or any(x.lower() in bio for x in s["aliases"])
@@ -217,6 +222,7 @@ def main() -> int:
                     "players": [f'{p["name"]} ({p["school_id"]}, {p["position"]})' for p in players],
                     "found_via": (f"teammate:@{handle}" if t.get("author_id") != uid else "timeline") + (" +ocr" if via_ocr else ""),
                     "signal": "strong" if strong else "weak",
+                    **({"tagged": True} if tagged else {}),  # author isn't the player; don't save their handle
                 }
 
     # Save new posts, and the handles of roster-matched authors.
@@ -224,7 +230,7 @@ def main() -> int:
     known = set(rosters.by_handle)
     for r in found.values():
         u = (r["username"] or "").lower()
-        if r["players"] and u and u not in known and len(r["players"]) == 1:
+        if r["players"] and u and u not in known and len(r["players"]) == 1 and not r.get("tagged"):
             name = r["players"][0].split(" (")[0]
             new_handles.append([r["school_id"], name, r["username"], "", f"auto: teammate_scan {dt.date.today()}"])
             known.add(u)

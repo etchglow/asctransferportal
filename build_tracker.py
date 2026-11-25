@@ -18,7 +18,7 @@ import json
 import re
 from pathlib import Path
 
-from x_search import DATA, POSTS, load_watchlist, redact
+from x_search import DATA, POSTS, known_handles, load_watchlist, redact, tagged_players
 
 ROOT = Path(__file__).resolve().parent
 DOCS = ROOT / "docs"
@@ -43,12 +43,16 @@ def load_overrides() -> list[dict]:
 
 def build() -> list[dict]:
     schools = {s["id"]: s["name"] for s in json.loads((ROOT / "schools.json").read_text(encoding="utf-8"))["schools"]}
-    roster = {(p["school_id"], p["name"].lower()): p for p in load_watchlist()}
+    watch = load_watchlist()
+    roster = {(p["school_id"], p["name"].lower()): p for p in watch}
+    handles = known_handles(watch)
     posts = [json.loads(l) for l in POSTS.read_text(encoding="utf-8").splitlines() if l.strip()] if POSTS.exists() else []
 
     players: dict[tuple[str, str], dict] = {}
     for post in posts:
         names = [parse_player(p) for p in post.get("players", [])]
+        if not names:  # a news/edits account: credit the known players it @-mentions
+            names = [parse_player(p) for p in tagged_players(post.get("text", ""), handles)]
         if not names:  # portal post from someone not on a roster: keep under their X name
             names = [(post.get("author_name") or post.get("username") or "?", post["school_id"])]
         signal = post.get("signal", "strong")  # x_search only saves posts with portal wording
