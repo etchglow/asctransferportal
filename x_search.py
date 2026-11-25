@@ -13,6 +13,7 @@ from __future__ import annotations
 
 import argparse
 import csv
+import hashlib
 import json
 import os
 import re
@@ -57,20 +58,45 @@ def token() -> str:
     return urllib.parse.unquote(tok)
 
 
-def build_queries(schools: list[dict], handles: dict[str, list[str]]) -> list[tuple[str, str]]:
-    """Per school: one query on school names / team accounts, plus queries on the
-    players' own accounts. Most players never name their school in a portal post;
-    it's only in their bio, which X search ignores. So their own accounts must be searched."""
+AGGREGATORS = DATA / "aggregators.csv"
+
+
+def load_aggregators() -> list[str]:
+    """News/edits/agency accounts that post portal news (data/aggregators.csv)."""
+    if not AGGREGATORS.exists():
+        return []
+    with AGGREGATORS.open(newline="", encoding="utf-8") as f:
+        return [r["x_handle"].strip().lstrip("@") for r in csv.DictReader(f) if r.get("x_handle", "").strip()]
+
+
+def build_queries(schools: list[dict], handles: dict[str, list[str]], aggregators: list[str] | None = None) -> list[tuple[str, str]]:
+    """Per school: one query on school names / team accounts, one on news-aggregator
+    accounts that name the school, plus queries on the players' own accounts. Most
+    players never name their school in a portal post; it's only in their bio, which
+    X search ignores. So their own accounts must be searched."""
     portal = "(" + " OR ".join(PORTAL_TERMS) + ")"
     out = []
     for s in schools:
-        names = [f'"{a}"' if " " in a or "-" in a else a for a in s["aliases"]]
+        aliases = [f'"{a}"' if " " in a or "-" in a else a for a in s["aliases"]]
+        names = list(aliases)
         for h in s.get("team_x", []):
             names += [f"from:{h}", f"@{h}"]
         q = f'{portal} ({" OR ".join(names)}) -is:retweet'
         if len(q) > MAX_QUERY_LEN:
             sys.exit(f"Query for {s['name']} is {len(q)} chars (limit {MAX_QUERY_LEN}); trim its aliases.")
         out.append((s["id"], q))
+        # Aggregators: any post with the word "portal" that names this school. Search returns
+        # only matching posts, so a busy national account costs only its ASC posts.
+        batch: list[str] = []
+        for h in (aggregators or []) + [""]:
+            trial = batch + [f"from:{h}"] if h else batch
+            q = f'portal ({" OR ".join(trial)}) ({" OR ".join(aliases)}) -is:retweet'
+            if h and len(q) <= MAX_QUERY_LEN:
+                batch = trial
+                continue
+            if batch:
+                out.append((s["id"], f'portal ({" OR ".join(batch)}) ({" OR ".join(aliases)}) -is:retweet'))
+            batch = [f"from:{h}"] if h else []
         # Player accounts, packed as many per query as the length limit allows.
         batch: list[str] = []
         for h in handles.get(s["id"], []) + [""]:
@@ -83,6 +109,11 @@ def build_queries(schools: list[dict], handles: dict[str, list[str]]) -> list[tu
                 out.append((s["id"], f'{portal} ({" OR ".join(batch)}) -is:retweet'))
             batch = [f"from:{h}"] if h else []
     return out
+
+
+def qkey(sid: str, q: str) -> str:
+    """State key for a query: stays the same when other queries are added or removed."""
+    return f"{sid}:{hashlib.sha1(q.encode()).hexdigest()[:12]}"
 
 
 def player_handles(roster: list[dict]) -> dict[str, list[str]]:
@@ -199,7 +230,7 @@ def main() -> int:
         schools = [s for s in schools if s["id"] == a.school]
     roster = load_watchlist()
     handles = known_handles(roster)
-    queries = build_queries(schools, player_handles(roster))
+    queries = build_queries(schools, player_handles(roster), load_aggregators())
     if a.dry_run:
         for sid, q in queries:
             print(f"[{sid}] ({len(q)} chars) {q}\n")
@@ -211,11 +242,16 @@ def main() -> int:
     if POSTS.exists():
         seen = {json.loads(l)["id"] for l in POSTS.read_text(encoding="utf-8").splitlines() if l.strip()}
     state = json.loads(STATE.read_text()) if STATE.exists() else {}
+    if any(re.fullmatch(r"\w+:\d+", k) for k in state):
+        # Old files keyed searches by list position, which shifts when handles or
+        # aggregators are added. Carry each over to its query text where it still lines up.
+        old = build_queries(schools, player_handles(roster))
+        state = {qkey(sid, q): state[f"{sid}:{i}"] for i, (sid, q) in enumerate(old) if f"{sid}:{i}" in state}
     endpoint = "all" if a.archive else "recent"
     budget, read, new = a.max_posts, 0, []
 
     for qi, (sid, q) in enumerate(queries):
-        key = f"{sid}:{qi}"
+        key = qkey(sid, q)
         if budget <= 0:
             print("Post cap reached; stopping.")
             break

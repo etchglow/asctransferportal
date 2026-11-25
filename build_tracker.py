@@ -18,7 +18,7 @@ import json
 import re
 from pathlib import Path
 
-from x_search import DATA, POSTS, known_handles, load_watchlist, redact, tagged_players
+from x_search import DATA, POSTS, known_handles, load_aggregators, load_watchlist, redact, tagged_players
 
 ROOT = Path(__file__).resolve().parent
 DOCS = ROOT / "docs"
@@ -46,6 +46,8 @@ def build() -> list[dict]:
     watch = load_watchlist()
     roster = {(p["school_id"], p["name"].lower()): p for p in watch}
     handles = known_handles(watch)
+    aggs = {a.lower() for a in load_aggregators()}
+    unmatched = []
     posts = [json.loads(l) for l in POSTS.read_text(encoding="utf-8").splitlines() if l.strip()] if POSTS.exists() else []
 
     players: dict[tuple[str, str], dict] = {}
@@ -53,6 +55,16 @@ def build() -> list[dict]:
         names = [parse_player(p) for p in post.get("players", [])]
         if not names:  # a news/edits account: credit the known players it @-mentions
             names = [parse_player(p) for p in tagged_players(post.get("text", ""), handles)]
+        tag_handle = ""
+        if not names and (post.get("username") or "").lower() in aggs:
+            # Aggregator post about a player we don't know yet: list them under the @handle
+            # it tags (add their name via handles_manual.csv), or skip it if it tags no one.
+            tags = [h for h in re.findall(r"@(\w{1,15})", post.get("text", "")) if h.lower() not in aggs]
+            if not tags:
+                unmatched.append(post)
+                continue
+            tag_handle = tags[0]
+            names = [(f"@{tag_handle}", post["school_id"])]
         if not names:  # portal post from someone not on a roster: keep under their X name
             names = [(post.get("author_name") or post.get("username") or "?", post["school_id"])]
         signal = post.get("signal", "strong")  # x_search only saves posts with portal wording
@@ -63,7 +75,9 @@ def build() -> list[dict]:
             row["strong"] |= signal == "strong"
             row["posts"].append(post)
             # Only the player's own account counts as their handle, not agencies or teammates.
-            if post.get("username") and name.lower().split()[-1] in (post.get("author_name") or "").lower():
+            if tag_handle:
+                row["handles"].add(tag_handle)
+            elif post.get("username") and name.lower().split()[-1] in (post.get("author_name") or "").lower():
                 row["handles"].add(post["username"])
 
     for o in load_overrides():
@@ -96,6 +110,8 @@ def build() -> list[dict]:
             "note": o.get("note", ""),
         })
     out.sort(key=lambda r: r["first_seen"] or "0000", reverse=True)  # newest first
+    for p in unmatched:
+        print(f"Aggregator post with no known player or tag (add the player to handles_manual.csv): {p['url']}")
     return out
 
 

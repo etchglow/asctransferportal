@@ -62,6 +62,9 @@ Useful extras:
 | `data/tracker.csv`, `docs/index.html` | The tracker output. |
 | `data/x_state.json`, `data/teammate_state.json` | Where each search left off, so runs only read new posts. |
 
+## News aggregators
+`data/aggregators.csv` lists news, edits and agency accounts that post portal news (e.g. @AGEDITS32, @CollegeFBPortal). Each day's search looks for their posts that say "portal" and name an ASC school. Search returns only matching posts, so a busy national account costs only its ASC posts. Posts are credited to the player they name or @-tag. A post about a player we don't know yet shows up as "@theirhandle" (add their name in `handles_manual.csv`). To follow another account, add a line to the file on GitHub.
+
 ## Image OCR
 Many announcements are just a graphic. The Action installs Tesseract (free OCR), and `teammate_scan.py` reads the photos on posts that have no portal wording, but only when the author is a rostered player or names the school in their bio. Hits show `+ocr` in `found_via`. To re-check older reposts, go to **Actions → Daily portal scan → Run workflow** and set `rescan_since` (e.g. `2026-11-01`) and optionally `school` (e.g. `umhb`). A rescan re-reads up to 30 posts per account, about $0.15 per account.
 
