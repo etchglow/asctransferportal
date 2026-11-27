@@ -111,6 +111,12 @@ def build_queries(schools: list[dict], handles: dict[str, list[str]], aggregator
     return out
 
 
+def post_age_days(post_id: str) -> float:
+    """Age of an X post from its ID (IDs encode their creation time)."""
+    created_ms = (int(post_id) >> 22) + 1288834974657
+    return (time.time() * 1000 - created_ms) / 86_400_000
+
+
 def qkey(sid: str, q: str) -> str:
     """State key for a query: stays the same when other queries are added or removed."""
     return f"{sid}:{hashlib.sha1(q.encode()).hexdigest()[:12]}"
@@ -265,7 +271,9 @@ def main() -> int:
         if a.archive:
             if a.start: params["start_time"] = f"{a.start}T00:00:00Z"
             if a.end: params["end_time"] = f"{a.end}T00:00:00Z"
-        elif state.get(key):
+        elif state.get(key) and post_age_days(state[key]) < 6.5:
+            # Recent search rejects a since_id older than 7 days. A query that has been quiet
+            # that long just searches the whole 7-day window again (seen posts are skipped).
             params["since_id"] = state[key]
         school_read, token_next = 0, None
         while budget > 0:
